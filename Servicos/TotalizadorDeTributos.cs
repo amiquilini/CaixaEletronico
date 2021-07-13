@@ -7,7 +7,7 @@ namespace CaixaEletronico
 {
     class TotalizadorDeTributos
     {
-        public double Total { get; set; }
+        public double Total { get; private set; }
 
         public void Acumula(ITributavel contaTributavel)
         {
