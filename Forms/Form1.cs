@@ -37,7 +37,7 @@ namespace CaixaEletronico
 
         private void btnDepositar_Click(object sender, EventArgs e)
         {
-            if (ValidaContaEValor())
+            if (ValidaConta() && ValidaValor())
             {
                 int indice = comboContas.SelectedIndex;
 
@@ -50,7 +50,7 @@ namespace CaixaEletronico
 
         private void btnSacar_Click(object sender, EventArgs e)
         {
-            if (ValidaContaEValor())
+            if (ValidaConta() && ValidaValor())
             {
                 int indice = comboContas.SelectedIndex;
 
@@ -66,7 +66,7 @@ namespace CaixaEletronico
             }
         }
 
-        private bool ValidaContaEValor()
+        private bool ValidaConta()
         {
             bool retornoValidacao = true;
             if (comboContas.SelectedItem == null)
@@ -74,7 +74,14 @@ namespace CaixaEletronico
                 MessageBox.Show("Selecione uma conta!");
                 retornoValidacao = false;
             }
-            else if (txtValor.Text == string.Empty || txtValor.Text.All(char.IsLetter))
+            
+            return retornoValidacao;
+        }
+
+        private bool ValidaValor()
+        {
+            bool retornoValidacao = true;
+            if (txtValor.Text == string.Empty || txtValor.Text.All(char.IsLetter))
             {
                 MessageBox.Show("Valor inválido.");
                 retornoValidacao = false;
@@ -117,7 +124,7 @@ namespace CaixaEletronico
 
         private void btnTransferir_Click(object sender, EventArgs e)
         {
-            if (ValidaContaEValor() && ValidaDestinoTransferencia())
+            if (ValidaConta() && ValidaValor() && ValidaDestinoTransferencia())
             {
                 int indice1 = comboContas.SelectedIndex;
                 int indice2 = comboDestinoTransferencia.SelectedIndex;
@@ -155,7 +162,7 @@ namespace CaixaEletronico
                 t.Adiciona(conta);
             }
 
-            MessageBox.Show("Saldo Total: " + t.SaldoTotal.ToString("C"));
+            MessageBox.Show("Saldo total em caixa: " + t.SaldoTotal.ToString("C"));
         }
 
         private void btnCalcularTributos_Click(object sender, EventArgs e)
@@ -170,7 +177,28 @@ namespace CaixaEletronico
                 }
             }
 
-            MessageBox.Show("Imposto Total: " + t.Total.ToString("C"));
+            MessageBox.Show("Imposto total a ser recolhido de correntistas: " + t.Total.ToString("C"));
+        }
+
+        private void btnImposto_Click(object sender, EventArgs e)
+        {
+            if (ValidaConta())
+            {
+                int indice = comboContas.SelectedIndex;
+
+                if (contas[indice] is ITributavel)
+                {
+
+                    double valor = contas[indice].Saldo;
+                    ITributavel contaSelecionada = (ITributavel)contas[indice];
+
+                    MessageBox.Show("Imposto a ser recolhido: " + contaSelecionada.CalculaTributo().ToString("C"));
+                }
+                else
+                {
+                    MessageBox.Show("Não há tributos para seu tipo de conta.");
+                }
+            }
         }
     }
 }
