@@ -301,7 +301,7 @@ namespace CaixaEletronico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 850);
+            this.ClientSize = new System.Drawing.Size(479, 850);
             this.Controls.Add(this.btnCalcularTributos);
             this.Controls.Add(this.btnTotalizarContas);
             this.Controls.Add(this.btnNovaConta);
