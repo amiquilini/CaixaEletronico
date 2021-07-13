@@ -1,5 +1,6 @@
 ﻿using CaixaEletronico.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,8 +8,7 @@ namespace CaixaEletronico
 {
     public partial class Form1 : Form
     {
-        private Conta[] contas = new Conta[10];
-        private int numeroDeContas = 0;
+        private List<Conta> contas = new List<Conta>();
 
         public Form1()
         {
@@ -17,7 +17,7 @@ namespace CaixaEletronico
 
         public void AdicionaNovaConta(Conta conta)
         {
-            this.contas[this.numeroDeContas++] = conta;
+            contas.Add(conta);
             comboContas.Items.Add(conta.Titular.Nome);
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -104,16 +104,13 @@ namespace CaixaEletronico
 
             foreach (Conta conta in contas)
             {
-                if (conta != null)
+                if (conta.Titular.Nome == contas[indice].Titular.Nome)
                 {
-                    if (conta.Titular.Nome == contas[indice].Titular.Nome)
-                    {
-                        comboDestinoTransferencia.Items.Add(conta.Titular.Nome + " - você");
-                    }
-                    else
-                    {
-                        comboDestinoTransferencia.Items.Add(conta.Titular.Nome);
-                    }
+                    comboDestinoTransferencia.Items.Add(conta.Titular.Nome + " - você");
+                }
+                else
+                {
+                    comboDestinoTransferencia.Items.Add(conta.Titular.Nome);
                 }
             }
         }
@@ -129,6 +126,7 @@ namespace CaixaEletronico
                 if (indice1 != indice2)
                 {
                     contas[indice1].Transfere(contas[indice2], valor);
+                    txtSaldo.Text = contas[indice1].Saldo.ToString("C");
                 }
                 else
                 {
@@ -154,7 +152,7 @@ namespace CaixaEletronico
 
             foreach (var conta in contas)
             {
-                if (conta != null) t.Adiciona(conta);
+                t.Adiciona(conta);
             }
 
             MessageBox.Show("Saldo Total: " + t.SaldoTotal.ToString("C"));
@@ -166,7 +164,7 @@ namespace CaixaEletronico
 
             foreach (var conta in contas)
             {
-                if (conta != null && conta is ITributavel)
+                if (conta is ITributavel)
                 {
                     t.Acumula((ITributavel)conta);
                 }
