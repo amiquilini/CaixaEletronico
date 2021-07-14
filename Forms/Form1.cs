@@ -177,9 +177,9 @@ namespace CaixaEletronico
 
             foreach (var conta in contas)
             {
-                if (conta is ITributavel)
+                if (conta is ContaCorrente)
                 {
-                    t.Acumula((ITributavel)conta);
+                    t.Acumula((ContaCorrente)conta);
                 }
             }
 
