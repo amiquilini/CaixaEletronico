@@ -17,22 +17,23 @@ namespace CaixaEletronico {
         private void btnCadastrar_Click(object sender, EventArgs e) {
             if (ValidarCampos()) {
                 if(comboTipoConta.Text == "Corrente") {
-                    Conta cc = new ContaCorrente(new Cliente(txtTitular.Text), Convert.ToInt32(txtNumero.Text), 0);
+                    Conta cc = new ContaCorrente(new Cliente(txtTitular.Text), 0);
                     this.formPrincipal.AdicionaNovaConta(cc);
                 }
                 else if (comboTipoConta.Text == "Poupança") {
-                    Conta cc = new ContaPoupanca(new Cliente(txtTitular.Text), Convert.ToInt32(txtNumero.Text), 0);
+                    Conta cc = new ContaPoupanca(new Cliente(txtTitular.Text), 0);
                     this.formPrincipal.AdicionaNovaConta(cc);
                 }
                 else if (comboTipoConta.Text == "Estudante") {
-                    Conta cc = new ContaEstudante(new Cliente(txtTitular.Text), Convert.ToInt32(txtNumero.Text), 0);
+                    Conta cc = new ContaEstudante(new Cliente(txtTitular.Text), 0);
                     this.formPrincipal.AdicionaNovaConta(cc);
                 }
                 else if (comboTipoConta.Text == "Investimento")
                 {
-                    Conta cc = new ContaInvestimento(new Cliente(txtTitular.Text), Convert.ToInt32(txtNumero.Text), 0);
+                    Conta cc = new ContaInvestimento(new Cliente(txtTitular.Text), 0);
                     this.formPrincipal.AdicionaNovaConta(cc);
                 }
+
                 this.Close();
             }
         }
@@ -40,7 +41,7 @@ namespace CaixaEletronico {
         private bool ValidarCampos() {
             bool retornoValidacao = true;
 
-            if (txtNumero.Text == string.Empty || txtTitular.Text == "") {
+            if (txtTitular.Text == "") {
                 MessageBox.Show("Campos Vazios!");
                 retornoValidacao = false;
             }
@@ -52,7 +53,7 @@ namespace CaixaEletronico {
         }
 
         private void FormCadastroNovaConta_Load(object sender, EventArgs e) {
-
+            txtNumero.Text = Conta.ProximoNumero().ToString();
         }
     }
 }

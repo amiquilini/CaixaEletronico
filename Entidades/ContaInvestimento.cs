@@ -6,7 +6,7 @@ using System.Text;
 namespace CaixaEletronico {
     class ContaInvestimento : Conta, ITributavel {
 
-        public ContaInvestimento(Cliente titular, int numero, double saldo) : base(titular, numero, saldo) {
+        public ContaInvestimento(Cliente titular, double saldo) : base(titular, saldo) {
 
         }
 

@@ -6,7 +6,7 @@ using System.Text;
 namespace CaixaEletronico {
     class ContaPoupanca : Conta, ITributavel {
 
-        public ContaPoupanca(Cliente titular, int numero, double saldo) : base(titular, numero, saldo) { 
+        public ContaPoupanca(Cliente titular, double saldo) : base(titular, saldo) { 
          
         }
 

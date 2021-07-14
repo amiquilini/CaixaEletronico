@@ -5,7 +5,7 @@ using System.Text;
 namespace CaixaEletronico {
     class ContaEstudante : Conta {
 
-        public ContaEstudante(Cliente titular, int numero, double saldo) : base(titular, numero, saldo) {
+        public ContaEstudante(Cliente titular, double saldo) : base(titular, saldo) {
 
         }
         public override void Deposita(double valor)

@@ -22,9 +22,9 @@ namespace CaixaEletronico
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conta c1 = new ContaCorrente(new Cliente("Victor"), 1, 100);
-            Conta c2 = new ContaPoupanca(new Cliente("Mauricio"), 2, 500);
-            Conta c3 = new ContaEstudante(new Cliente("Osni"), 3, 300);
+            Conta c1 = new ContaCorrente(new Cliente("Victor"), 100);
+            Conta c2 = new ContaPoupanca(new Cliente("Mauricio"), 500);
+            Conta c3 = new ContaEstudante(new Cliente("Osni"), 300);
 
             this.AdicionaNovaConta(c1);
             this.AdicionaNovaConta(c2);
@@ -132,7 +132,13 @@ namespace CaixaEletronico
 
                 if (indice1 != indice2)
                 {
-                    contas[indice1].Transfere(contas[indice2], valor);
+                    bool operacaoTransfere = contas[indice1].Transfere(contas[indice2], valor);
+
+                    if (!operacaoTransfere)
+                    {
+                        MessageBox.Show("Saldo insuficiente!");
+                    }
+
                     txtSaldo.Text = contas[indice1].Saldo.ToString("C");
                 }
                 else

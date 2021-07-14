@@ -6,7 +6,7 @@ using System.Text;
 namespace CaixaEletronico {
     class ContaCorrente : Conta, ITributavel {
 
-        public ContaCorrente(Cliente titular, int numero, double saldo) : base(titular, numero, saldo) {
+        public ContaCorrente(Cliente titular, double saldo) : base(titular, saldo) {
 
         }
 
