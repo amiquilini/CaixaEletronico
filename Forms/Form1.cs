@@ -40,11 +40,19 @@ namespace CaixaEletronico
             if (ValidaConta() && ValidaValor())
             {
                 int indice = comboContas.SelectedIndex;
-
                 double valor = double.Parse(txtValor.Text);
-                contas[indice].Deposita(valor);
+                try
+                {
+                    contas[indice].Deposita(valor);
 
-                txtSaldo.Text = contas[indice].Saldo.ToString("C");
+                    txtSaldo.Text = contas[indice].Saldo.ToString("C");
+
+                    MessageBox.Show("Depósito realizado com sucesso!");
+                }
+                catch (ArgumentException)
+                {
+                    MessageBox.Show("Não é possível depositar um valor negativo.");
+                }
             }
         }
 
@@ -53,16 +61,56 @@ namespace CaixaEletronico
             if (ValidaConta() && ValidaValor())
             {
                 int indice = comboContas.SelectedIndex;
-
                 double valor = double.Parse(txtValor.Text);
-                bool operacaoSaca = contas[indice].Saca(valor);
 
-                if (!operacaoSaca)
+                try
                 {
-                    MessageBox.Show("Saldo insuficiente!");
-                }
+                    contas[indice].Saca(valor);
+                    txtSaldo.Text = contas[indice].Saldo.ToString("C");
 
-                txtSaldo.Text = contas[indice].Saldo.ToString("C");
+                    MessageBox.Show("Dinheiro liberado!");
+                }
+                catch (ArgumentException)
+                {
+                    MessageBox.Show("Não é possível sacar um valor negativo.");
+                }
+                catch (SaldoInsuficienteException)
+                {
+                    MessageBox.Show("Saldo Insuficiente.");
+                }
+            }
+        }
+
+        private void btnTransferir_Click(object sender, EventArgs e)
+        {
+            if (ValidaConta() && ValidaValor() && ValidaDestinoTransferencia())
+            {
+                int indice1 = comboContas.SelectedIndex;
+                int indice2 = comboDestinoTransferencia.SelectedIndex;
+                double valor = double.Parse(txtValor.Text);
+
+                if (indice1 != indice2)
+                {
+                    try
+                    {
+                        contas[indice1].Transfere(contas[indice2], valor);
+                        txtSaldo.Text = contas[indice1].Saldo.ToString("C");
+
+                        MessageBox.Show("Tranferência realizada com sucesso!");
+                    }
+                    catch (ArgumentException)
+                    {
+                        MessageBox.Show("Não é possível transferir um valor negativo.");
+                    }
+                    catch (SaldoInsuficienteException)
+                    {
+                        MessageBox.Show("Saldo Insuficiente.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Operação inválida.");
+                }
             }
         }
 
@@ -74,18 +122,19 @@ namespace CaixaEletronico
                 MessageBox.Show("Selecione uma conta!");
                 retornoValidacao = false;
             }
-            
+
             return retornoValidacao;
         }
 
         private bool ValidaValor()
         {
             bool retornoValidacao = true;
-            if (txtValor.Text == string.Empty || txtValor.Text.All(char.IsLetter))
+            if (!double.TryParse(txtValor.Text, out double valor) || txtValor.Text == "0")
             {
-                MessageBox.Show("Valor inválido.");
+                MessageBox.Show("Digite um valor válido.");
                 retornoValidacao = false;
             }
+            
             return retornoValidacao;
         }
 
@@ -118,32 +167,6 @@ namespace CaixaEletronico
                 else
                 {
                     comboDestinoTransferencia.Items.Add(conta.Titular.Nome);
-                }
-            }
-        }
-
-        private void btnTransferir_Click(object sender, EventArgs e)
-        {
-            if (ValidaConta() && ValidaValor() && ValidaDestinoTransferencia())
-            {
-                int indice1 = comboContas.SelectedIndex;
-                int indice2 = comboDestinoTransferencia.SelectedIndex;
-                double valor = double.Parse(txtValor.Text);
-
-                if (indice1 != indice2)
-                {
-                    bool operacaoTransfere = contas[indice1].Transfere(contas[indice2], valor);
-
-                    if (!operacaoTransfere)
-                    {
-                        MessageBox.Show("Saldo insuficiente!");
-                    }
-
-                    txtSaldo.Text = contas[indice1].Saldo.ToString("C");
-                }
-                else
-                {
-                    MessageBox.Show("Operação inválida.");
                 }
             }
         }

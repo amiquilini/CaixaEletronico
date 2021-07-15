@@ -3,11 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CaixaEletronico {
-    class ContaPoupanca : Conta, ITributavel {
+namespace CaixaEletronico
+{
+    class ContaPoupanca : Conta, ITributavel
+    {
 
-        public ContaPoupanca(Cliente titular, double saldo) : base(titular, saldo) { 
-         
+        public ContaPoupanca(Cliente titular, double saldo) : base(titular, saldo)
+        {
+
         }
 
         public double CalculaTributo()
@@ -17,22 +20,24 @@ namespace CaixaEletronico {
 
         public override void Deposita(double valor)
         {
-            if (valor > 0)
+            if (valor < 0.0)
             {
-                Saldo += valor;
+                throw new ArgumentException();
             }
+            Saldo += valor;
         }
-        public override bool Saca(double valor)
+
+        public override void Saca(double valor)
         {
-            if (valor + 0.10 > Saldo || valor == 0)
+            if (valor < 0.0)
             {
-                return false;
+                throw new ArgumentException();
             }
-            else
+            else if (valor + 0.10 > Saldo)
             {
-                Saldo -= (valor + 0.10);
-                return true;
+                throw new SaldoInsuficienteException();
             }
+            Saldo -= (valor + 0.10);
         }
     }
 }

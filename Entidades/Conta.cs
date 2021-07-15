@@ -18,20 +18,22 @@ namespace CaixaEletronico
         }
 
         public abstract void Deposita(double valor);
-        public abstract bool Saca(double valor);
-        public virtual bool Transfere(Conta contaDestino, double valor)
+        public abstract void Saca(double valor);
+        public void Transfere(Conta contaDestino, double valor)
         {
-            if (valor <= Saldo)
+            if (valor < 0.0)
             {
-                Saldo -= valor;
-                contaDestino.Deposita(valor);
-
-                return true;
+                throw new ArgumentException();
+            }
+            else if (valor > Saldo)
+            {
+                throw new SaldoInsuficienteException();
             }
             else
             {
-                return false;
-            }
+                Saldo -= valor;
+                contaDestino.Saldo += valor;
+            } 
         }
 
         public static int ProximoNumero()

@@ -3,10 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CaixaEletronico {
-    class ContaInvestimento : Conta, ITributavel {
+namespace CaixaEletronico
+{
+    class ContaInvestimento : Conta, ITributavel
+    {
 
-        public ContaInvestimento(Cliente titular, double saldo) : base(titular, saldo) {
+        public ContaInvestimento(Cliente titular, double saldo) : base(titular, saldo)
+        {
 
         }
 
@@ -17,22 +20,23 @@ namespace CaixaEletronico {
 
         public override void Deposita(double valor)
         {
-            if (valor > 0)
+            if (valor < 0.0)
             {
-                Saldo += valor;
+                throw new ArgumentException();
             }
+            Saldo += valor;
         }
-        public override bool Saca(double valor)
+        public override void Saca(double valor)
         {
-            if (valor > Saldo || valor == 0)
+            if (valor < 0.0)
             {
-                return false;
+                throw new ArgumentException();
             }
-            else
+            else if (valor > Saldo)
             {
-                Saldo -= valor;
-                return true;
+                throw new SaldoInsuficienteException();
             }
+            Saldo -= valor;
         }
     }
 }
