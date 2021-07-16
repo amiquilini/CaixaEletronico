@@ -48,6 +48,8 @@ namespace CaixaEletronico
                     txtSaldo.Text = contas[indice].Saldo.ToString("C");
 
                     MessageBox.Show("Depósito realizado com sucesso!");
+
+                    txtValor.Text = "";
                 }
                 catch (ArgumentException)
                 {
@@ -69,6 +71,8 @@ namespace CaixaEletronico
                     txtSaldo.Text = contas[indice].Saldo.ToString("C");
 
                     MessageBox.Show("Dinheiro liberado!");
+
+                    txtValor.Text = "";
                 }
                 catch (ArgumentException)
                 {
@@ -97,6 +101,8 @@ namespace CaixaEletronico
                         txtSaldo.Text = contas[indice1].Saldo.ToString("C");
 
                         MessageBox.Show("Tranferência realizada com sucesso!");
+
+                        txtValor.Text = "";
                     }
                     catch (ArgumentException)
                     {
@@ -151,6 +157,8 @@ namespace CaixaEletronico
 
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtValor.Text = "";
+
             int indice = comboContas.SelectedIndex;
             comboDestinoTransferencia.Items.Clear();
 
