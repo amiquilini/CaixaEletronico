@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CaixaEletronico.Contas;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Servicos
 {
     class TotalizadorDeContas
     {

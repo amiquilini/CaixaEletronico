@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CaixaEletronico.Excecoes;
+using CaixaEletronico.Usuarios;
+using System;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Contas
 {
     public abstract class Conta
     {

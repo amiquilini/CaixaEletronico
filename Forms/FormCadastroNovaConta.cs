@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using CaixaEletronico.Contas;
+using CaixaEletronico.Usuarios;
+using System;
 using System.Windows.Forms;
 
 namespace CaixaEletronico {

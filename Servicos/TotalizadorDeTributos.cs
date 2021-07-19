@@ -1,9 +1,6 @@
 ﻿using CaixaEletronico.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Servicos
 {
     class TotalizadorDeTributos
     {

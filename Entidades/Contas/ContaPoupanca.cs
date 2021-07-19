@@ -1,21 +1,21 @@
-﻿using CaixaEletronico.Interfaces;
+﻿using CaixaEletronico.Excecoes;
+using CaixaEletronico.Interfaces;
+using CaixaEletronico.Usuarios;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Contas
 {
-    class ContaInvestimento : Conta, ITributavel
+    class ContaPoupanca : Conta, ITributavel
     {
 
-        public ContaInvestimento(Cliente titular, double saldo) : base(titular, saldo)
+        public ContaPoupanca(Cliente titular, double saldo) : base(titular, saldo)
         {
 
         }
 
         public double CalculaTributo()
         {
-            return Saldo * 0.03;
+            return Saldo * 0.02;
         }
 
         public override void Deposita(double valor)
@@ -26,17 +26,18 @@ namespace CaixaEletronico
             }
             Saldo += valor;
         }
+
         public override void Saca(double valor)
         {
             if (valor < 0.0)
             {
                 throw new ArgumentException();
             }
-            else if (valor > Saldo)
+            else if (valor + 0.10 > Saldo)
             {
                 throw new SaldoInsuficienteException();
             }
-            Saldo -= valor;
+            Saldo -= (valor + 0.10);
         }
     }
 }

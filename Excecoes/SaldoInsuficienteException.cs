@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Excecoes
 {
     class SaldoInsuficienteException : Exception
     {

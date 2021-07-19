@@ -1,42 +1,36 @@
-﻿using CaixaEletronico.Interfaces;
+﻿using CaixaEletronico.Excecoes;
+using CaixaEletronico.Usuarios;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CaixaEletronico
+namespace CaixaEletronico.Contas
 {
-    class ContaCorrente : Conta, ITributavel
+    class ContaEstudante : Conta
     {
 
-        public ContaCorrente(Cliente titular, double saldo) : base(titular, saldo)
+        public ContaEstudante(Cliente titular, double saldo) : base(titular, saldo)
         {
 
         }
-
-        public double CalculaTributo()
-        {
-            return Saldo * 0.05;
-        }
-
         public override void Deposita(double valor)
         {
             if (valor < 0.0)
             {
                 throw new ArgumentException();
             }
-            Saldo += (valor - 0.10);
+            Saldo += valor * 1.10;
         }
+
         public override void Saca(double valor)
         {
             if (valor < 0.0)
             {
                 throw new ArgumentException();
             }
-            else if (valor + 0.05 > Saldo)
+            else if (valor > Saldo)
             {
                 throw new SaldoInsuficienteException();
             }
-            Saldo -= (valor + 0.05);
+            Saldo -= valor;
         }
     }
 }
