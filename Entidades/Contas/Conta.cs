@@ -40,5 +40,12 @@ namespace CaixaEletronico.Contas
         {
             return numeroDeContas + 1;
         }
+
+        public override string ToString()
+        {
+            return "Numero: " + Numero 
+                + "\n" 
+                + "Titular: " + Titular.Nome;
+        } 
     }
 }

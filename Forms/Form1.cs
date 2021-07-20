@@ -21,7 +21,8 @@ namespace CaixaEletronico
         public void AdicionaNovaConta(Conta conta)
         {
             contas.Add(conta);
-            comboContas.Items.Add(conta.Titular.Nome);
+            comboContas.Items.Add(conta);
+            comboContas.DisplayMember = "Titular";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,13 +43,14 @@ namespace CaixaEletronico
         {
             if (ValidaConta() && ValidaValor())
             {
-                int indice = comboContas.SelectedIndex;
+                Conta conta = (Conta)comboContas.SelectedItem;
                 double valor = double.Parse(txtValor.Text);
+
                 try
                 {
-                    contas[indice].Deposita(valor);
+                    conta.Deposita(valor);
 
-                    txtSaldo.Text = contas[indice].Saldo.ToString("C");
+                    txtSaldo.Text = conta.Saldo.ToString("C");
 
                     MessageBox.Show("Depósito realizado com sucesso!");
 
@@ -65,13 +67,13 @@ namespace CaixaEletronico
         {
             if (ValidaConta() && ValidaValor())
             {
-                int indice = comboContas.SelectedIndex;
+                Conta conta = (Conta)comboContas.SelectedItem;
                 double valor = double.Parse(txtValor.Text);
 
                 try
                 {
-                    contas[indice].Saca(valor);
-                    txtSaldo.Text = contas[indice].Saldo.ToString("C");
+                    conta.Saca(valor);
+                    txtSaldo.Text = conta.Saldo.ToString("C");
 
                     MessageBox.Show("Dinheiro liberado!");
 
@@ -92,92 +94,48 @@ namespace CaixaEletronico
         {
             if (ValidaConta() && ValidaValor() && ValidaDestinoTransferencia())
             {
-                int indice1 = comboContas.SelectedIndex;
-                int indice2 = comboDestinoTransferencia.SelectedIndex;
+                Conta conta1 = (Conta)comboContas.SelectedItem;
+                Conta conta2 = (Conta)comboDestinoTransferencia.SelectedItem;
+
                 double valor = double.Parse(txtValor.Text);
 
-                if (indice1 != indice2)
+                try
                 {
-                    try
-                    {
-                        contas[indice1].Transfere(contas[indice2], valor);
-                        txtSaldo.Text = contas[indice1].Saldo.ToString("C");
+                    conta1.Transfere(conta2, valor);
+                    txtSaldo.Text = conta1.Saldo.ToString("C");
 
-                        MessageBox.Show("Tranferência realizada com sucesso!");
+                    MessageBox.Show("Tranferência realizada com sucesso!");
 
-                        txtValor.Text = "";
-                    }
-                    catch (ArgumentException)
-                    {
-                        MessageBox.Show("Não é possível transferir um valor negativo.");
-                    }
-                    catch (SaldoInsuficienteException)
-                    {
-                        MessageBox.Show("Saldo Insuficiente.");
-                    }
+                    txtValor.Text = "";
                 }
-                else
+                catch (ArgumentException)
                 {
-                    MessageBox.Show("Operação inválida.");
+                    MessageBox.Show("Não é possível transferir um valor negativo.");
+                }
+                catch (SaldoInsuficienteException)
+                {
+                    MessageBox.Show("Saldo Insuficiente.");
                 }
             }
-        }
-
-        private bool ValidaConta()
-        {
-            bool retornoValidacao = true;
-            if (comboContas.SelectedItem == null)
-            {
-                MessageBox.Show("Selecione uma conta!");
-                retornoValidacao = false;
-            }
-
-            return retornoValidacao;
-        }
-
-        private bool ValidaValor()
-        {
-            bool retornoValidacao = true;
-            if (!double.TryParse(txtValor.Text, out double valor) || txtValor.Text == "0")
-            {
-                MessageBox.Show("Digite um valor válido.");
-                retornoValidacao = false;
-            }
-            
-            return retornoValidacao;
-        }
-
-        private bool ValidaDestinoTransferencia()
-        {
-            bool retornoValidacao = true;
-            if (comboDestinoTransferencia.SelectedItem == null)
-            {
-                MessageBox.Show("Selecione uma conta destino!");
-                retornoValidacao = false;
-            }
-            return retornoValidacao;
         }
 
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtValor.Text = "";
 
-            int indice = comboContas.SelectedIndex;
+            Conta conta = (Conta)comboContas.SelectedItem;
             comboDestinoTransferencia.Items.Clear();
 
-            txtTitular.Text = contas[indice].Titular.Nome;
-            txtNumero.Text = contas[indice].Numero.ToString();
-            txtSaldo.Text = contas[indice].Saldo.ToString("C");
+            txtTitular.Text = conta.Titular.Nome;
+            txtNumero.Text = conta.Numero.ToString();
+            txtSaldo.Text = conta.Saldo.ToString("C");
 
-            foreach (Conta conta in contas)
+            foreach (Conta outra in contas)
             {
-                if (conta.Titular.Nome == contas[indice].Titular.Nome)
+                if (outra.Numero != conta.Numero)
                 {
-                    comboDestinoTransferencia.Items.Add(conta.Titular.Nome + " - você");
-                }
-                else
-                {
-                    comboDestinoTransferencia.Items.Add(conta.Titular.Nome);
+                    comboDestinoTransferencia.Items.Add(outra);
+                    comboDestinoTransferencia.DisplayMember = "Titular";
                 }
             }
         }
@@ -239,6 +197,40 @@ namespace CaixaEletronico
                     MessageBox.Show("Não há tributos para seu tipo de conta.");
                 }
             }
+        }
+        private bool ValidaConta()
+        {
+            bool retornoValidacao = true;
+            if (comboContas.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma conta!");
+                retornoValidacao = false;
+            }
+
+            return retornoValidacao;
+        }
+
+        private bool ValidaValor()
+        {
+            bool retornoValidacao = true;
+            if (!double.TryParse(txtValor.Text, out double valor) || txtValor.Text == "0")
+            {
+                MessageBox.Show("Digite um valor válido.");
+                retornoValidacao = false;
+            }
+
+            return retornoValidacao;
+        }
+
+        private bool ValidaDestinoTransferencia()
+        {
+            bool retornoValidacao = true;
+            if (comboDestinoTransferencia.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione uma conta destino!");
+                retornoValidacao = false;
+            }
+            return retornoValidacao;
         }
     }
 }

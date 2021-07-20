@@ -9,5 +9,9 @@ namespace CaixaEletronico.Usuarios
         {
             Nome = nome;
         }
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }
