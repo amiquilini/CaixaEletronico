@@ -2,30 +2,25 @@
 using CaixaEletronico.Contas;
 using CaixaEletronico.Usuarios;
 using CaixaEletronico.Excecoes;
+using CaixaEletronico.Servicos;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using CaixaEletronico.Servicos;
 
 namespace CaixaEletronico
 {
-    public partial class Form1 : Form
+    public partial class FormCaixaEletronico : Form
     {
-        private List<Conta> contas = new List<Conta>();
+        private List<Conta> contas;
 
-        public Form1()
+        public FormCaixaEletronico()
         {
             InitializeComponent();
         }
+        private void FormCaixaEletronico_Load(object sender, EventArgs e)
+        {
+            contas = new List<Conta>();
 
-        public void AdicionaNovaConta(Conta conta)
-        {
-            contas.Add(conta);
-            comboContas.Items.Add(conta);
-            comboContas.DisplayMember = "Titular";
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
             Conta c1 = new ContaCorrente(new Cliente("Victor"), 100);
             Conta c2 = new ContaPoupanca(new Cliente("Mauricio"), 500);
             Conta c3 = new ContaEstudante(new Cliente("Osni"), 300);
@@ -37,6 +32,12 @@ namespace CaixaEletronico
             txtNumero.Enabled = false;
             txtSaldo.Enabled = false;
             txtTitular.Enabled = false;
+        }
+        public void AdicionaNovaConta(Conta conta)
+        {
+            contas.Add(conta);
+            comboContas.Items.Add(conta);
+            comboContas.DisplayMember = "Titular";
         }
 
         private void btnDepositar_Click(object sender, EventArgs e)
@@ -140,18 +141,13 @@ namespace CaixaEletronico
             }
         }
 
-        private void comboDestinoTransferencia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNovaConta_Click(object sender, EventArgs e)
         {
             FormCadastroNovaConta frmCadastro = new FormCadastroNovaConta(this);
             frmCadastro.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnTotalizarContas_Click(object sender, EventArgs e)
         {
             TotalizadorDeContas t = new TotalizadorDeContas();
 
@@ -163,22 +159,7 @@ namespace CaixaEletronico
             MessageBox.Show("Saldo total em caixa: " + t.SaldoTotal.ToString("C"));
         }
 
-        private void btnCalcularTributos_Click(object sender, EventArgs e)
-        {
-            TotalizadorDeTributos t = new TotalizadorDeTributos();
-
-            foreach (var conta in contas)
-            {
-                if (conta is ContaCorrente)
-                {
-                    t.Acumula((ContaCorrente)conta);
-                }
-            }
-
-            MessageBox.Show("Imposto total a ser recolhido de correntistas: " + t.Total.ToString("C"));
-        }
-
-        private void btnImposto_Click(object sender, EventArgs e)
+        private void btnCalcularTributo_Click(object sender, EventArgs e)
         {
             if (ValidaConta())
             {
@@ -197,6 +178,20 @@ namespace CaixaEletronico
                     MessageBox.Show("Não há tributos para seu tipo de conta.");
                 }
             }
+        }
+        private void btnTotalizarTributos_Click(object sender, EventArgs e)
+        {
+            TotalizadorDeTributos t = new TotalizadorDeTributos();
+
+            foreach (var conta in contas)
+            {
+                if (conta is ContaCorrente)
+                {
+                    t.Acumula((ContaCorrente)conta);
+                }
+            }
+
+            MessageBox.Show("Imposto total a ser recolhido de correntistas: " + t.Total.ToString("C"));
         }
         private bool ValidaConta()
         {
@@ -231,6 +226,11 @@ namespace CaixaEletronico
                 retornoValidacao = false;
             }
             return retornoValidacao;
+        }
+
+        private void comboDestinoTransferencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

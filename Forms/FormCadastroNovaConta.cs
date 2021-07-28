@@ -5,8 +5,8 @@ using System.Windows.Forms;
 
 namespace CaixaEletronico {
     public partial class FormCadastroNovaConta : Form {
-        private Form1 formPrincipal;
-        public FormCadastroNovaConta(Form1 formPrincipal) {
+        private FormCaixaEletronico formPrincipal;
+        public FormCadastroNovaConta(FormCaixaEletronico formPrincipal) {
             this.formPrincipal = formPrincipal;
             InitializeComponent();
         }

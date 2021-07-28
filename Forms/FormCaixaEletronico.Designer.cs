@@ -1,7 +1,7 @@
 ﻿
 namespace CaixaEletronico
 {
-    partial class Form1
+    partial class FormCaixaEletronico
     {
         /// <summary>
         ///  Required designer variable.
@@ -40,7 +40,7 @@ namespace CaixaEletronico
             this.btnDepositar = new System.Windows.Forms.Button();
             this.btnSacar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnImposto = new System.Windows.Forms.Button();
+            this.btnCalcularTributo = new System.Windows.Forms.Button();
             this.labelContas = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.gbBuscaConta = new System.Windows.Forms.GroupBox();
@@ -52,7 +52,7 @@ namespace CaixaEletronico
             this.lblMoeda = new System.Windows.Forms.Label();
             this.btnNovaConta = new System.Windows.Forms.Button();
             this.btnTotalizarContas = new System.Windows.Forms.Button();
-            this.btnCalcularTributos = new System.Windows.Forms.Button();
+            this.btnTotalizarTributos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gbBuscaConta.SuspendLayout();
             this.gbTransferencia.SuspendLayout();
@@ -155,7 +155,7 @@ namespace CaixaEletronico
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnImposto);
+            this.groupBox1.Controls.Add(this.btnCalcularTributo);
             this.groupBox1.Controls.Add(this.txtTitular);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -171,15 +171,15 @@ namespace CaixaEletronico
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conta";
             // 
-            // btnImposto
+            // btnCalcularTributo
             // 
-            this.btnImposto.Location = new System.Drawing.Point(218, 226);
-            this.btnImposto.Name = "btnImposto";
-            this.btnImposto.Size = new System.Drawing.Size(163, 38);
-            this.btnImposto.TabIndex = 8;
-            this.btnImposto.Text = "Calcular Tributo";
-            this.btnImposto.UseVisualStyleBackColor = true;
-            this.btnImposto.Click += new System.EventHandler(this.btnImposto_Click);
+            this.btnCalcularTributo.Location = new System.Drawing.Point(218, 226);
+            this.btnCalcularTributo.Name = "btnCalcularTributo";
+            this.btnCalcularTributo.Size = new System.Drawing.Size(163, 38);
+            this.btnCalcularTributo.TabIndex = 8;
+            this.btnCalcularTributo.Text = "Calcular Tributo";
+            this.btnCalcularTributo.UseVisualStyleBackColor = true;
+            this.btnCalcularTributo.Click += new System.EventHandler(this.btnCalcularTributo_Click);
             // 
             // labelContas
             // 
@@ -297,24 +297,24 @@ namespace CaixaEletronico
             this.btnTotalizarContas.TabIndex = 15;
             this.btnTotalizarContas.Text = "Totalizar Contas";
             this.btnTotalizarContas.UseVisualStyleBackColor = true;
-            this.btnTotalizarContas.Click += new System.EventHandler(this.button1_Click);
+            this.btnTotalizarContas.Click += new System.EventHandler(this.btnTotalizarContas_Click);
             // 
-            // btnCalcularTributos
+            // btnTotalizarTributos
             // 
-            this.btnCalcularTributos.Location = new System.Drawing.Point(18, 857);
-            this.btnCalcularTributos.Name = "btnCalcularTributos";
-            this.btnCalcularTributos.Size = new System.Drawing.Size(165, 42);
-            this.btnCalcularTributos.TabIndex = 16;
-            this.btnCalcularTributos.Text = "Totalizar Tributos";
-            this.btnCalcularTributos.UseVisualStyleBackColor = true;
-            this.btnCalcularTributos.Click += new System.EventHandler(this.btnCalcularTributos_Click);
+            this.btnTotalizarTributos.Location = new System.Drawing.Point(18, 857);
+            this.btnTotalizarTributos.Name = "btnTotalizarTributos";
+            this.btnTotalizarTributos.Size = new System.Drawing.Size(165, 42);
+            this.btnTotalizarTributos.TabIndex = 16;
+            this.btnTotalizarTributos.Text = "Totalizar Tributos";
+            this.btnTotalizarTributos.UseVisualStyleBackColor = true;
+            this.btnTotalizarTributos.Click += new System.EventHandler(this.btnTotalizarTributos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 917);
-            this.Controls.Add(this.btnCalcularTributos);
+            this.Controls.Add(this.btnTotalizarTributos);
             this.Controls.Add(this.btnTotalizarContas);
             this.Controls.Add(this.btnNovaConta);
             this.Controls.Add(this.groupBox2);
@@ -322,9 +322,9 @@ namespace CaixaEletronico
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormCaixaEletronico";
             this.Text = "Caixa Eletrônico";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FormCaixaEletronico_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbBuscaConta.ResumeLayout(false);
@@ -361,8 +361,8 @@ namespace CaixaEletronico
         private System.Windows.Forms.Button btnNovaConta;
         private System.Windows.Forms.Label lblMoeda;
         private System.Windows.Forms.Button btnTotalizarContas;
-        private System.Windows.Forms.Button btnCalcularTributos;
-        private System.Windows.Forms.Button btnImposto;
+        private System.Windows.Forms.Button btnTotalizarTributos;
+        private System.Windows.Forms.Button btnCalcularTributo;
     }
 }
 
