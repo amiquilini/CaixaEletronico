@@ -132,31 +132,6 @@ namespace CaixaEletronico
             txtValor.Text = "";
 
             Conta conta = (Conta)comboContas.SelectedItem;
-
-            PreencherInformacoes(conta);
-        }
-
-        private void btnBuscaConta_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string nomeTitular = txtBuscaTitular.Text;
-
-                Conta conta = dicionario[nomeTitular];
-
-                txtValor.Text = "";
-
-                comboContas.SelectedItem = conta;
-
-                PreencherInformacoes(conta);
-            }
-            catch (KeyNotFoundException)
-            {
-                MessageBox.Show("Titular não encontrado!");
-            }
-        }
-        private void PreencherInformacoes(Conta conta)
-        {
             comboDestinoTransferencia.Items.Clear();
 
             txtTitular.Text = conta.Titular.Nome;
@@ -170,6 +145,24 @@ namespace CaixaEletronico
                     comboDestinoTransferencia.Items.Add(outra);
                     comboDestinoTransferencia.DisplayMember = "Titular";
                 }
+            }
+        }
+
+        private void btnBuscaConta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nomeTitular = txtBuscaTitular.Text;
+
+                Conta conta = dicionario[nomeTitular];
+
+                txtValor.Text = "";
+
+                comboContas.SelectedItem = conta;
+            }
+            catch (KeyNotFoundException)
+            {
+                MessageBox.Show("Titular não encontrado!");
             }
         }
 
