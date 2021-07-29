@@ -44,6 +44,9 @@ namespace CaixaEletronico
             this.labelContas = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.gbBuscaConta = new System.Windows.Forms.GroupBox();
+            this.btnBuscaConta = new System.Windows.Forms.Button();
+            this.lblTitularBusca = new System.Windows.Forms.Label();
+            this.txtBuscaTitular = new System.Windows.Forms.TextBox();
             this.lblContaDestino = new System.Windows.Forms.Label();
             this.comboDestinoTransferencia = new System.Windows.Forms.ComboBox();
             this.gbTransferencia = new System.Windows.Forms.GroupBox();
@@ -53,10 +56,12 @@ namespace CaixaEletronico
             this.btnNovaConta = new System.Windows.Forms.Button();
             this.btnTotalizarContas = new System.Windows.Forms.Button();
             this.btnTotalizarTributos = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.gbBuscaConta.SuspendLayout();
             this.gbTransferencia.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +97,7 @@ namespace CaixaEletronico
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 52);
+            this.label4.Location = new System.Drawing.Point(24, 68);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 25);
@@ -117,7 +122,7 @@ namespace CaixaEletronico
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(173, 49);
+            this.txtValor.Location = new System.Drawing.Point(173, 65);
             this.txtValor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(235, 31);
@@ -133,7 +138,7 @@ namespace CaixaEletronico
             // 
             // btnDepositar
             // 
-            this.btnDepositar.Location = new System.Drawing.Point(173, 105);
+            this.btnDepositar.Location = new System.Drawing.Point(173, 121);
             this.btnDepositar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDepositar.Name = "btnDepositar";
             this.btnDepositar.Size = new System.Drawing.Size(107, 38);
@@ -144,7 +149,7 @@ namespace CaixaEletronico
             // 
             // btnSacar
             // 
-            this.btnSacar.Location = new System.Drawing.Point(301, 105);
+            this.btnSacar.Location = new System.Drawing.Point(301, 121);
             this.btnSacar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSacar.Name = "btnSacar";
             this.btnSacar.Size = new System.Drawing.Size(107, 38);
@@ -162,14 +167,14 @@ namespace CaixaEletronico
             this.groupBox1.Controls.Add(this.txtSaldo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtNumero);
-            this.groupBox1.Location = new System.Drawing.Point(18, 128);
+            this.groupBox1.Location = new System.Drawing.Point(18, 169);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Size = new System.Drawing.Size(455, 291);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Conta";
+            this.groupBox1.Text = "Informações";
             // 
             // btnCalcularTributo
             // 
@@ -203,14 +208,45 @@ namespace CaixaEletronico
             // 
             // gbBuscaConta
             // 
+            this.gbBuscaConta.Controls.Add(this.btnBuscaConta);
             this.gbBuscaConta.Controls.Add(this.labelContas);
+            this.gbBuscaConta.Controls.Add(this.lblTitularBusca);
+            this.gbBuscaConta.Controls.Add(this.txtBuscaTitular);
             this.gbBuscaConta.Controls.Add(this.comboContas);
             this.gbBuscaConta.Location = new System.Drawing.Point(18, 17);
             this.gbBuscaConta.Name = "gbBuscaConta";
-            this.gbBuscaConta.Size = new System.Drawing.Size(455, 94);
+            this.gbBuscaConta.Size = new System.Drawing.Size(455, 148);
             this.gbBuscaConta.TabIndex = 11;
             this.gbBuscaConta.TabStop = false;
-            this.gbBuscaConta.Text = "Busca de Conta";
+            this.gbBuscaConta.Text = "Conta";
+            // 
+            // btnBuscaConta
+            // 
+            this.btnBuscaConta.Location = new System.Drawing.Point(325, 90);
+            this.btnBuscaConta.Name = "btnBuscaConta";
+            this.btnBuscaConta.Size = new System.Drawing.Size(90, 37);
+            this.btnBuscaConta.TabIndex = 18;
+            this.btnBuscaConta.Text = "Buscar";
+            this.btnBuscaConta.UseVisualStyleBackColor = true;
+            this.btnBuscaConta.Click += new System.EventHandler(this.btnBuscaConta_Click);
+            // 
+            // lblTitularBusca
+            // 
+            this.lblTitularBusca.AutoSize = true;
+            this.lblTitularBusca.Location = new System.Drawing.Point(32, 96);
+            this.lblTitularBusca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitularBusca.Name = "lblTitularBusca";
+            this.lblTitularBusca.Size = new System.Drawing.Size(140, 25);
+            this.lblTitularBusca.TabIndex = 9;
+            this.lblTitularBusca.Text = "Busca por titular";
+            // 
+            // txtBuscaTitular
+            // 
+            this.txtBuscaTitular.Location = new System.Drawing.Point(179, 93);
+            this.txtBuscaTitular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscaTitular.Name = "txtBuscaTitular";
+            this.txtBuscaTitular.Size = new System.Drawing.Size(139, 31);
+            this.txtBuscaTitular.TabIndex = 10;
             // 
             // lblContaDestino
             // 
@@ -237,7 +273,7 @@ namespace CaixaEletronico
             this.gbTransferencia.Controls.Add(this.btnTransferir);
             this.gbTransferencia.Controls.Add(this.lblContaDestino);
             this.gbTransferencia.Controls.Add(this.comboDestinoTransferencia);
-            this.gbTransferencia.Location = new System.Drawing.Point(16, 165);
+            this.gbTransferencia.Location = new System.Drawing.Point(16, 181);
             this.gbTransferencia.Name = "gbTransferencia";
             this.gbTransferencia.Size = new System.Drawing.Size(424, 165);
             this.gbTransferencia.TabIndex = 12;
@@ -263,9 +299,9 @@ namespace CaixaEletronico
             this.groupBox2.Controls.Add(this.btnDepositar);
             this.groupBox2.Controls.Add(this.txtValor);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(18, 439);
+            this.groupBox2.Location = new System.Drawing.Point(492, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(455, 347);
+            this.groupBox2.Size = new System.Drawing.Size(455, 402);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Operações";
@@ -273,7 +309,7 @@ namespace CaixaEletronico
             // lblMoeda
             // 
             this.lblMoeda.AutoSize = true;
-            this.lblMoeda.Location = new System.Drawing.Point(131, 52);
+            this.lblMoeda.Location = new System.Drawing.Point(131, 68);
             this.lblMoeda.Name = "lblMoeda";
             this.lblMoeda.Size = new System.Drawing.Size(33, 25);
             this.lblMoeda.TabIndex = 13;
@@ -281,7 +317,7 @@ namespace CaixaEletronico
             // 
             // btnNovaConta
             // 
-            this.btnNovaConta.Location = new System.Drawing.Point(310, 801);
+            this.btnNovaConta.Location = new System.Drawing.Point(159, 488);
             this.btnNovaConta.Name = "btnNovaConta";
             this.btnNovaConta.Size = new System.Drawing.Size(163, 42);
             this.btnNovaConta.TabIndex = 14;
@@ -291,7 +327,7 @@ namespace CaixaEletronico
             // 
             // btnTotalizarContas
             // 
-            this.btnTotalizarContas.Location = new System.Drawing.Point(19, 801);
+            this.btnTotalizarContas.Location = new System.Drawing.Point(54, 42);
             this.btnTotalizarContas.Name = "btnTotalizarContas";
             this.btnTotalizarContas.Size = new System.Drawing.Size(164, 42);
             this.btnTotalizarContas.TabIndex = 15;
@@ -301,7 +337,7 @@ namespace CaixaEletronico
             // 
             // btnTotalizarTributos
             // 
-            this.btnTotalizarTributos.Location = new System.Drawing.Point(18, 857);
+            this.btnTotalizarTributos.Location = new System.Drawing.Point(235, 42);
             this.btnTotalizarTributos.Name = "btnTotalizarTributos";
             this.btnTotalizarTributos.Size = new System.Drawing.Size(165, 42);
             this.btnTotalizarTributos.TabIndex = 16;
@@ -309,13 +345,23 @@ namespace CaixaEletronico
             this.btnTotalizarTributos.UseVisualStyleBackColor = true;
             this.btnTotalizarTributos.Click += new System.EventHandler(this.btnTotalizarTributos_Click);
             // 
-            // Form1
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnTotalizarTributos);
+            this.groupBox3.Controls.Add(this.btnTotalizarContas);
+            this.groupBox3.Location = new System.Drawing.Point(492, 426);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(455, 115);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Totalizadores";
+            // 
+            // FormCaixaEletronico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 917);
-            this.Controls.Add(this.btnTotalizarTributos);
-            this.Controls.Add(this.btnTotalizarContas);
+            this.ClientSize = new System.Drawing.Size(965, 557);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnNovaConta);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbBuscaConta);
@@ -333,6 +379,7 @@ namespace CaixaEletronico
             this.gbTransferencia.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -363,6 +410,10 @@ namespace CaixaEletronico
         private System.Windows.Forms.Button btnTotalizarContas;
         private System.Windows.Forms.Button btnTotalizarTributos;
         private System.Windows.Forms.Button btnCalcularTributo;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtBuscaTitular;
+        private System.Windows.Forms.Label lblTitularBusca;
+        private System.Windows.Forms.Button btnBuscaConta;
     }
 }
 

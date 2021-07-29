@@ -12,6 +12,7 @@ namespace CaixaEletronico
     public partial class FormCaixaEletronico : Form
     {
         private List<Conta> contas;
+        private Dictionary<string, Conta> dicionario;
 
         public FormCaixaEletronico()
         {
@@ -20,10 +21,11 @@ namespace CaixaEletronico
         private void FormCaixaEletronico_Load(object sender, EventArgs e)
         {
             contas = new List<Conta>();
+            dicionario = new Dictionary<string, Conta>();
 
-            Conta c1 = new ContaCorrente(new Cliente("Victor"), 100);
-            Conta c2 = new ContaPoupanca(new Cliente("Mauricio"), 500);
-            Conta c3 = new ContaEstudante(new Cliente("Osni"), 300);
+            Conta c1 = new ContaCorrente(new Cliente("Amanda"), 500);
+            Conta c2 = new ContaPoupanca(new Cliente("Camila"), 500);
+            Conta c3 = new ContaEstudante(new Cliente("Rafael"), 500);
 
             this.AdicionaNovaConta(c1);
             this.AdicionaNovaConta(c2);
@@ -36,6 +38,7 @@ namespace CaixaEletronico
         public void AdicionaNovaConta(Conta conta)
         {
             contas.Add(conta);
+            dicionario.Add(conta.Titular.Nome, conta);
             comboContas.Items.Add(conta);
             comboContas.DisplayMember = "Titular";
         }
@@ -125,6 +128,25 @@ namespace CaixaEletronico
             txtValor.Text = "";
 
             Conta conta = (Conta)comboContas.SelectedItem;
+
+            PreencherInformacoes(conta);
+        }
+
+        private void btnBuscaConta_Click(object sender, EventArgs e)
+        {
+            string nomeTitular = txtBuscaTitular.Text;
+
+            Conta conta = dicionario[nomeTitular];
+
+            txtValor.Text = "";
+
+            comboContas.SelectedItem = conta;
+
+            PreencherInformacoes(conta);
+
+        }
+        private void PreencherInformacoes(Conta conta)
+        {
             comboDestinoTransferencia.Items.Clear();
 
             txtTitular.Text = conta.Titular.Nome;
