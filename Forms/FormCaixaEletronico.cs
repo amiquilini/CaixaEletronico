@@ -23,13 +23,17 @@ namespace CaixaEletronico
             contas = new List<Conta>();
             dicionario = new Dictionary<string, Conta>();
 
-            Conta c1 = new ContaCorrente(new Cliente("Amanda"), 500);
-            Conta c2 = new ContaPoupanca(new Cliente("Camila"), 500);
-            Conta c3 = new ContaEstudante(new Cliente("Rafael"), 500);
+            Conta c1 = new ContaCorrente(new Cliente("Amanda"), 650);
+            Conta c2 = new ContaPoupanca(new Cliente("Camila"), 570);
+            Conta c3 = new ContaEstudante(new Cliente("Rafael"), 780);
+            Conta c4 = new ContaInvestimento(new Cliente("Renan"), 550);
+            Conta c5 = new ContaCorrente(new Cliente("Riquelmy"), 600);
 
             this.AdicionaNovaConta(c1);
             this.AdicionaNovaConta(c2);
             this.AdicionaNovaConta(c3);
+            this.AdicionaNovaConta(c4);
+            this.AdicionaNovaConta(c5);
 
             txtNumero.Enabled = false;
             txtSaldo.Enabled = false;
