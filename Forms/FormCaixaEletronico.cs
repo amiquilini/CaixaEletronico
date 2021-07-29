@@ -134,16 +134,22 @@ namespace CaixaEletronico
 
         private void btnBuscaConta_Click(object sender, EventArgs e)
         {
-            string nomeTitular = txtBuscaTitular.Text;
+            try
+            {
+                string nomeTitular = txtBuscaTitular.Text;
 
-            Conta conta = dicionario[nomeTitular];
+                Conta conta = dicionario[nomeTitular];
 
-            txtValor.Text = "";
+                txtValor.Text = "";
 
-            comboContas.SelectedItem = conta;
+                comboContas.SelectedItem = conta;
 
-            PreencherInformacoes(conta);
-
+                PreencherInformacoes(conta);
+            }
+            catch (KeyNotFoundException)
+            {
+                MessageBox.Show("Titular não encontrado!");
+            }
         }
         private void PreencherInformacoes(Conta conta)
         {
