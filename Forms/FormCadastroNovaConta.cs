@@ -20,6 +20,11 @@ namespace CaixaEletronico {
             devedores = g.GerarListaNomes();
         }
 
+        private void FormCadastroNovaConta_Load(object sender, EventArgs e)
+        {
+            txtNumero.Text = Conta.ProximoNumero().ToString();
+        }
+
         private void btnCadastrar_Click(object sender, EventArgs e) {
             if (ValidarCampos()) {
                 if (!TitularEhDevedor(txtTitular.Text))
@@ -74,10 +79,6 @@ namespace CaixaEletronico {
             }
 
             return ehDevedor;
-        }
-
-        private void FormCadastroNovaConta_Load(object sender, EventArgs e) {
-            txtNumero.Text = Conta.ProximoNumero().ToString();
         }
     }
 }
