@@ -25,9 +25,9 @@ namespace CaixaEletronico
             dicionario = new Dictionary<string, Conta>();
 
             Conta c1 = new ContaCorrente(new Cliente("Amanda"), 650);
-            Conta c2 = new ContaPoupanca(new Cliente("Camila"), 570);
+            Conta c2 = new ContaInvestimento(new Cliente("Renan"), 550);
             Conta c3 = new ContaEstudante(new Cliente("Rafael"), 780);
-            Conta c4 = new ContaInvestimento(new Cliente("Renan"), 550);
+            Conta c4 = new ContaPoupanca(new Cliente("Camila"), 570);
             Conta c5 = new ContaCorrente(new Cliente("Riquelmy"), 600);
 
             this.AdicionaNovaConta(c1);
@@ -42,10 +42,18 @@ namespace CaixaEletronico
         }
         public void AdicionaNovaConta(Conta conta)
         {
-            contas.Add(conta);
-            dicionario.Add(conta.Titular.Nome, conta);
-            comboContas.Items.Add(conta);
-            comboContas.DisplayMember = "Titular";
+            try
+            {
+                contas.Add(conta);
+                dicionario.Add(conta.Titular.Nome, conta);
+                comboContas.Items.Add(conta);
+                comboContas.DisplayMember = "Titular";
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Esse Titular já possui uma conta!");
+            }
+            
         }
 
         private void btnDepositar_Click(object sender, EventArgs e)
