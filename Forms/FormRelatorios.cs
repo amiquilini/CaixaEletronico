@@ -25,7 +25,7 @@ namespace CaixaEletronico.Forms
         private void btnFiltroContas_Click(object sender, EventArgs e)
         {
             lstResultado.Items.Clear();
-            var contasFiltradas = (IEnumerable<Conta>) contas;
+            var contasFiltradas = contas.OrderBy(c => c.Titular.Nome).ThenBy(c => c.Numero);
 
             if (ValidaValor() && ValidaNumeroConta())
             {
@@ -34,19 +34,19 @@ namespace CaixaEletronico.Forms
                     double valor = Convert.ToDouble(txtValor.Text);
                     int num = Convert.ToInt32(txtNumeroConta.Text);
 
-                    contasFiltradas = contas.Where(c => (c.Saldo > valor) && (c.Numero < num));
+                    contasFiltradas = contas.Where(c => (c.Saldo > valor) && (c.Numero < num)).OrderBy(c => c.Titular.Nome).ThenBy(c => c.Numero);
                 }
                 else if (txtValor.Text != "")
                 {
                     double valor = Convert.ToDouble(txtValor.Text);
 
-                    contasFiltradas = contas.Where(c => c.Saldo > valor);
+                    contasFiltradas = contas.Where(c => c.Saldo > valor).OrderBy(c => c.Titular.Nome).ThenBy(c => c.Numero);
                 }
                 else if (txtNumeroConta.Text != "")
                 {
                     int num = Convert.ToInt32(txtNumeroConta.Text);
 
-                    contasFiltradas = contas.Where(c => c.Numero < num);
+                    contasFiltradas = contas.Where(c => c.Numero < num).OrderBy(c => c.Titular.Nome).ThenBy(c => c.Numero);
                 }
 
                 foreach (var c in contasFiltradas)
