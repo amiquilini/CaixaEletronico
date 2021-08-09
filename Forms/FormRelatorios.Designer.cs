@@ -37,10 +37,10 @@ namespace CaixaEletronico.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSaldoTotal = new System.Windows.Forms.TextBox();
             this.txtMaiorSaldo = new System.Windows.Forms.TextBox();
+            this.txtSaldoTotal = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -123,23 +123,14 @@ namespace CaixaEletronico.Forms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resumo";
             // 
-            // label3
+            // txtMaiorSaldo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Saldo Total";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Maior Saldo";
+            this.txtMaiorSaldo.Enabled = false;
+            this.txtMaiorSaldo.Location = new System.Drawing.Point(165, 63);
+            this.txtMaiorSaldo.Name = "txtMaiorSaldo";
+            this.txtMaiorSaldo.Size = new System.Drawing.Size(93, 23);
+            this.txtMaiorSaldo.TabIndex = 8;
+            this.txtMaiorSaldo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtSaldoTotal
             // 
@@ -150,23 +141,33 @@ namespace CaixaEletronico.Forms
             this.txtSaldoTotal.TabIndex = 7;
             this.txtSaldoTotal.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txtMaiorSaldo
+            // label4
             // 
-            this.txtMaiorSaldo.Enabled = false;
-            this.txtMaiorSaldo.Location = new System.Drawing.Point(165, 63);
-            this.txtMaiorSaldo.Name = "txtMaiorSaldo";
-            this.txtMaiorSaldo.Size = new System.Drawing.Size(93, 23);
-            this.txtMaiorSaldo.TabIndex = 8;
-            this.txtMaiorSaldo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(64, 66);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Maior Saldo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Saldo Total";
             // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 456);
+            this.ClientSize = new System.Drawing.Size(344, 407);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstResultado);
+            this.MaximizeBox = false;
             this.Name = "FormRelatorios";
             this.Text = "FormRelatorios";
             this.Load += new System.EventHandler(this.FormRelatorios_Load);
