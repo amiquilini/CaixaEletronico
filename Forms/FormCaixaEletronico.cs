@@ -6,12 +6,13 @@ using CaixaEletronico.Servicos;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using CaixaEletronico.Forms;
 
 namespace CaixaEletronico
 {
     public partial class FormCaixaEletronico : Form
     {
-        private List<Conta> contas;
+        public List<Conta> contas;
         private Dictionary<string, Conta> dicionario;
 
         public FormCaixaEletronico()
@@ -170,6 +171,12 @@ namespace CaixaEletronico
         {
             FormCadastroNovaConta frmCadastro = new FormCadastroNovaConta(this);
             frmCadastro.ShowDialog();
+        }
+
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+            FormRelatorios frmRelatorios = new FormRelatorios(contas);
+            frmRelatorios.ShowDialog();
         }
 
         private void btnTotalizarContas_Click(object sender, EventArgs e)

@@ -1,0 +1,112 @@
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Form1.resources
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\AndreLuisdaSilvaCami\source\repos\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Form1.resources
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210630_Aula11_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Form1.resources
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\source\repos\D20210701_Aula12_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCadastroNovaConta.resources
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Form1.resources
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCadastroNovaConta.resources
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210707_Aula13_CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.Form1.resources
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCadastroNovaConta.resources
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\source\repos\D20210713_Aula14_CaixaEletronico - Interface\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCadastroNovaConta.resources
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCaixaEletronico.resources
+C:\Users\009064631\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Forms.FormEditorDeTexto.resources
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.exe
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.deps.json
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.json
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.runtimeconfig.dev.json
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\bin\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.AssemblyReference.cache
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCadastroNovaConta.resources
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.FormCaixaEletronico.resources
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Forms.FormRelatorios.resources
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.GenerateResource.cache
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfoInputs.cache
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.AssemblyInfo.cs
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.csproj.CoreCompileInputs.cache
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache

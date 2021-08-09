@@ -5,14 +5,17 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace CaixaEletronico {
-    public partial class FormCadastroNovaConta : Form {
+namespace CaixaEletronico
+{
+    public partial class FormCadastroNovaConta : Form
+    {
 
         private ICollection<string> devedores;
 
         private FormCaixaEletronico formPrincipal;
 
-        public FormCadastroNovaConta(FormCaixaEletronico formPrincipal) {
+        public FormCadastroNovaConta(FormCaixaEletronico formPrincipal)
+        {
             this.formPrincipal = formPrincipal;
             InitializeComponent();
 
@@ -25,8 +28,10 @@ namespace CaixaEletronico {
             txtNumero.Text = Conta.ProximoNumero().ToString();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e) {
-            if (ValidarCampos()) {
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
                 if (!TitularEhDevedor(txtTitular.Text))
                 {
                     if (comboTipoConta.Text == "Corrente")
@@ -54,18 +59,21 @@ namespace CaixaEletronico {
             }
         }
 
-        private bool ValidarCampos() {
+        private bool ValidarCampos()
+        {
             bool retornoValidacao = true;
 
-            if (txtTitular.Text == "") {
+            if (txtTitular.Text == "")
+            {
                 MessageBox.Show("Campos Vazios!");
                 retornoValidacao = false;
             }
-            else if (comboTipoConta.SelectedItem == null) {
+            else if (comboTipoConta.SelectedItem == null)
+            {
                 MessageBox.Show("Selecione um tipo de conta!");
                 retornoValidacao = false;
             }
-            
+
             return retornoValidacao;
         }
 

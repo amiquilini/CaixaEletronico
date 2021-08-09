@@ -43,9 +43,7 @@ namespace CaixaEletronico.Contas
 
         public override string ToString()
         {
-            return "Numero: " + Numero 
-                + "\n" 
-                + "Titular: " + Titular.Nome;
+            return $"Titular: {Titular.Nome} (n° {Numero})";
         } 
     }
 }

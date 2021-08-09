@@ -38,24 +38,27 @@ namespace CaixaEletronico {
             // lblTitular
             // 
             this.lblTitular.AutoSize = true;
-            this.lblTitular.Location = new System.Drawing.Point(36, 100);
+            this.lblTitular.Location = new System.Drawing.Point(25, 60);
+            this.lblTitular.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitular.Name = "lblTitular";
-            this.lblTitular.Size = new System.Drawing.Size(60, 25);
+            this.lblTitular.Size = new System.Drawing.Size(40, 15);
             this.lblTitular.TabIndex = 1;
             this.lblTitular.Text = "Titular";
             // 
             // txtTitular
             // 
-            this.txtTitular.Location = new System.Drawing.Point(179, 97);
+            this.txtTitular.Location = new System.Drawing.Point(125, 58);
+            this.txtTitular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitular.Name = "txtTitular";
-            this.txtTitular.Size = new System.Drawing.Size(201, 31);
+            this.txtTitular.Size = new System.Drawing.Size(142, 23);
             this.txtTitular.TabIndex = 3;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(98, 208);
+            this.btnCadastrar.Location = new System.Drawing.Point(125, 125);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(225, 37);
+            this.btnCadastrar.Size = new System.Drawing.Size(142, 26);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@ namespace CaixaEletronico {
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 146);
+            this.label1.Location = new System.Drawing.Point(25, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tipo de Conta";
             // 
@@ -79,23 +83,26 @@ namespace CaixaEletronico {
             "Poupança",
             "Estudante",
             "Investimento"});
-            this.comboTipoConta.Location = new System.Drawing.Point(179, 148);
+            this.comboTipoConta.Location = new System.Drawing.Point(125, 89);
+            this.comboTipoConta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboTipoConta.Name = "comboTipoConta";
-            this.comboTipoConta.Size = new System.Drawing.Size(200, 33);
+            this.comboTipoConta.Size = new System.Drawing.Size(141, 23);
             this.comboTipoConta.TabIndex = 6;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtNumero);
+            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.lblNumero);
             this.groupBox1.Controls.Add(this.comboTipoConta);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtTitular);
             this.groupBox1.Controls.Add(this.lblTitular);
-            this.groupBox1.Location = new System.Drawing.Point(59, 34);
+            this.groupBox1.Location = new System.Drawing.Point(41, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 277);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(293, 166);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nova Conta";
@@ -103,26 +110,29 @@ namespace CaixaEletronico {
             // txtNumero
             // 
             this.txtNumero.Enabled = false;
-            this.txtNumero.Location = new System.Drawing.Point(178, 46);
+            this.txtNumero.Location = new System.Drawing.Point(125, 28);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(201, 31);
+            this.txtNumero.Size = new System.Drawing.Size(142, 23);
             this.txtNumero.TabIndex = 8;
             // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(35, 49);
+            this.lblNumero.Location = new System.Drawing.Point(24, 29);
+            this.lblNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(77, 25);
+            this.lblNumero.Size = new System.Drawing.Size(51, 15);
             this.lblNumero.TabIndex = 7;
             this.lblNumero.Text = "Numero";
             // 
             // FormCadastroNovaConta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 354);
+            this.ClientSize = new System.Drawing.Size(372, 212);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormCadastroNovaConta";
             this.Text = "FormCadastroNovaConta";
