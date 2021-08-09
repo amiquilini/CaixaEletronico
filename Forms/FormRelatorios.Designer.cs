@@ -30,8 +30,13 @@ namespace CaixaEletronico.Forms
         private void InitializeComponent()
         {
             this.lstResultado = new System.Windows.Forms.ListBox();
-            this.btnFiltroSaldo = new System.Windows.Forms.Button();
+            this.btnFiltroContas = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
+            this.txtNumeroConta = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstResultado
@@ -43,43 +48,86 @@ namespace CaixaEletronico.Forms
             this.lstResultado.Size = new System.Drawing.Size(322, 169);
             this.lstResultado.TabIndex = 0;
             // 
-            // btnFiltroSaldo
+            // btnFiltroContas
             // 
-            this.btnFiltroSaldo.Location = new System.Drawing.Point(127, 187);
-            this.btnFiltroSaldo.Name = "btnFiltroSaldo";
-            this.btnFiltroSaldo.Size = new System.Drawing.Size(82, 23);
-            this.btnFiltroSaldo.TabIndex = 1;
-            this.btnFiltroSaldo.Text = "Saldo >";
-            this.btnFiltroSaldo.UseVisualStyleBackColor = true;
-            this.btnFiltroSaldo.Click += new System.EventHandler(this.btnFiltroSaldo_Click);
+            this.btnFiltroContas.Location = new System.Drawing.Point(122, 63);
+            this.btnFiltroContas.Name = "btnFiltroContas";
+            this.btnFiltroContas.Size = new System.Drawing.Size(72, 23);
+            this.btnFiltroContas.TabIndex = 1;
+            this.btnFiltroContas.Text = "Busca";
+            this.btnFiltroContas.UseVisualStyleBackColor = true;
+            this.btnFiltroContas.Click += new System.EventHandler(this.btnFiltroContas_Click);
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(215, 187);
+            this.txtValor.Location = new System.Drawing.Point(60, 26);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(118, 23);
+            this.txtValor.Size = new System.Drawing.Size(93, 23);
             this.txtValor.TabIndex = 2;
+            // 
+            // txtNumeroConta
+            // 
+            this.txtNumeroConta.Location = new System.Drawing.Point(221, 27);
+            this.txtNumeroConta.Name = "txtNumeroConta";
+            this.txtNumeroConta.Size = new System.Drawing.Size(93, 23);
+            this.txtNumeroConta.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Saldo >";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(156, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Número <";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtNumeroConta);
+            this.groupBox1.Controls.Add(this.txtValor);
+            this.groupBox1.Controls.Add(this.btnFiltroContas);
+            this.groupBox1.Location = new System.Drawing.Point(12, 187);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(322, 99);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Buscar Contas";
             // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 220);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.btnFiltroSaldo);
+            this.ClientSize = new System.Drawing.Size(345, 382);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstResultado);
             this.Name = "FormRelatorios";
             this.Text = "FormRelatorios";
             this.Load += new System.EventHandler(this.FormRelatorios_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox lstResultado;
-        private System.Windows.Forms.Button btnFiltroSaldo;
+        private System.Windows.Forms.Button btnFiltroContas;
         private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.TextBox txtNumeroConta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
