@@ -1,12 +1,8 @@
 ﻿using CaixaEletronico.Contas;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CaixaEletronico.Forms
@@ -29,7 +25,7 @@ namespace CaixaEletronico.Forms
         private void btnFiltroContas_Click(object sender, EventArgs e)
         {
             lstResultado.Items.Clear();
-            var contasFiltradas = (IEnumerable) contas;
+            var contasFiltradas = (IEnumerable<Conta>) contas;
 
             if (ValidaValor() && ValidaNumeroConta())
             {
@@ -57,8 +53,12 @@ namespace CaixaEletronico.Forms
                 {
                     lstResultado.Items.Add(c);
                 }
+
+                txtSaldoTotal.Text = contasFiltradas.Sum(c => c.Saldo).ToString("C");
+                txtMaiorSaldo.Text = contasFiltradas.Max(c => c.Saldo).ToString("C");
+
             }
-            
+
         }
 
         private bool ValidaValor()
@@ -83,6 +83,16 @@ namespace CaixaEletronico.Forms
             }
 
             return retornoValidacao;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
