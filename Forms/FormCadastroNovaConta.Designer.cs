@@ -48,7 +48,7 @@ namespace CaixaEletronico {
             // txtTitular
             // 
             this.txtTitular.Location = new System.Drawing.Point(125, 58);
-            this.txtTitular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTitular.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(142, 23);
             this.txtTitular.TabIndex = 3;
@@ -56,7 +56,7 @@ namespace CaixaEletronico {
             // btnCadastrar
             // 
             this.btnCadastrar.Location = new System.Drawing.Point(125, 125);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(142, 26);
             this.btnCadastrar.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace CaixaEletronico {
             "Estudante",
             "Investimento"});
             this.comboTipoConta.Location = new System.Drawing.Point(125, 89);
-            this.comboTipoConta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTipoConta.Margin = new System.Windows.Forms.Padding(2);
             this.comboTipoConta.Name = "comboTipoConta";
             this.comboTipoConta.Size = new System.Drawing.Size(141, 23);
             this.comboTipoConta.TabIndex = 6;
@@ -99,9 +99,9 @@ namespace CaixaEletronico {
             this.groupBox1.Controls.Add(this.txtTitular);
             this.groupBox1.Controls.Add(this.lblTitular);
             this.groupBox1.Location = new System.Drawing.Point(41, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(293, 166);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -111,7 +111,7 @@ namespace CaixaEletronico {
             // 
             this.txtNumero.Enabled = false;
             this.txtNumero.Location = new System.Drawing.Point(125, 28);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(142, 23);
             this.txtNumero.TabIndex = 8;
@@ -130,9 +130,11 @@ namespace CaixaEletronico {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(372, 212);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormCadastroNovaConta";
             this.Text = "FormCadastroNovaConta";

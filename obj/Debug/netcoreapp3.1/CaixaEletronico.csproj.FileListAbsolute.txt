@@ -110,3 +110,4 @@ C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debu
 C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.dll
 C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.pdb
 C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.genruntimeconfig.cache
+C:\Users\amiqu\Box\IBM_Itau_Treinamento\ProjetoApostila\CaixaEletronico\obj\Debug\netcoreapp3.1\CaixaEletronico.Properties.Resources.resources
